@@ -7,7 +7,7 @@ pipeline {
 
             steps{
 
-                echo " Running build"
+                echo " first stage is build"
 
 
             }
@@ -17,7 +17,7 @@ pipeline {
 
          steps{
           
-          echo "Running Unit test"
+          echo "Seconmd stage is Unit test"
          }
 
        }
@@ -27,7 +27,7 @@ pipeline {
        stage ('deploy'){
 
         steps{
-            echo "Running the Deployment"
+            echo "third stage is  Deployment"
         }
        }
     }
