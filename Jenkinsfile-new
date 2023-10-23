@@ -5,7 +5,7 @@ pipeline {
         maven 'maven-test'
     }
     stages {
-        stage ('Checkout SCM') {
+        stage ('Checkout_SCM') {
 
             steps {
           	    
@@ -13,14 +13,14 @@ pipeline {
             }
         }
 
-        stage ('Build') {
+        stage ('Maven_Build') {
 
             steps {
                sh 'mvn clean package'
             }
         }
         
-        stage ('deploy') {
+        stage ('Deploy_Tomcat') {
 
             steps {
                sshagent(['tomcat-web-server']) {
