@@ -23,7 +23,7 @@ pipeline {
         stage ('Deploy_Tomcat') {
 
             steps {
-               sshagent(['tomcat-web-server']) {
+               sshagent(['tomcat-server']) {
               sh "scp -o StrictHostKeyChecking=no  target/maven-web-application.war  ec2-user@16.171.241.152:/opt/tomcat9/webapps"
             
                     
